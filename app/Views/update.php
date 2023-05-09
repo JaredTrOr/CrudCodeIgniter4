@@ -8,16 +8,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles/show_list.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>CRUD - Codeigniter 4</title>
+    <title>Actualizar</title>
   </head>
   <body>
     <div class="container">
       <h1>CRUD con Codeigniter 4</h1>
       <div class="row">
+        <h1>Actualizar usuario</h1>
         <div class="col-lg-6">
-          <form action="<?php base_url().'/create' ?>" method="POST">
+          <form action="<?php base_url().'/update' ?>" method="POST">
+            <input type="text" hidden="" id="idNombre" name="idNombre">
             <div class="form-element-container">
               <label for="nombre">Escribe tu nombre:</label>
               <input type="text" class="form-control" id="nombre" name="nombre">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="form-element-container">
-              <button class="btn main-btn light" type="button">Guardar</button>
+              <button class="btn main-btn light" type="button">Actualizar</button>
             </div>
           </form> 
         </div>
@@ -41,8 +41,8 @@
           <img src="images/form_image.png" alt="note image">
         </div>
 
+        </div>
       </div>
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
