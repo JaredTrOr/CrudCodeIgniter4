@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles/show_list.css">
     <link rel="stylesheet" href="styles/index.css">
+    <!--WHY CANT I ADD ANOTHER DESIGN-->
     <title>CRUD - Codeigniter 4</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container mt-5">
       <h1>CRUD con Codeigniter 4</h1>
       <div class="row form-row">
         <div class="col-lg-6">
@@ -47,17 +47,30 @@
           <h1>Mostrar usuario</h1>
           <table class="user-table table table-hover table-border">
             <tr>
+              <th>Id</th>
               <th>Nombre</th>
               <th>Apellido paterno</th>
               <th>Apellido materno</th>
               <th>Editar</th>
               <th>Eliminar</th>
             </tr>
+
+            <?php foreach($data as $key){?>
+              <tr>
+                <td><?= $key->id_nombre ?></td>
+                <td><?= $key->nombre ?></td>
+                <td><?= $key->apellidoPaterno ?></td>
+                <td><?= $key->apellidoMaterno ?></td>
+                <td>
+                  <a href="<?php echo base_url().'update/'.$key->id_nombre?>" class="btn btn-warning">Editar</a>
+                </td>
+                <td>
+                  <a href="" class="btn btn-danger">Eliminar</a>
+                </td>
+              </tr>
+            <?php }?>
           </table>
         </div>
-
-
-        
       </div>
     </div>
 

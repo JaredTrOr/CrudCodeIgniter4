@@ -11,24 +11,23 @@
     <title>Actualizar</title>
   </head>
   <body>
-    <div class="container">
-      <h1>CRUD con Codeigniter 4</h1>
+    <div class="container mt-5">
+      <h1>Actualizar usuario</h1>
       <div class="row">
-        <h1>Actualizar usuario</h1>
         <div class="col-lg-6">
           <form action="<?php base_url().'/update' ?>" method="POST">
             <input type="text" hidden="" id="idNombre" name="idNombre">
             <div class="form-element-container">
               <label for="nombre">Escribe tu nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombre">
+              <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo ($data[0]->nombre); ?>">
             </div>
             <div class="form-element-container">
               <label for="apellidoPaterno">Escribe tu apellido paterno:</label>
-              <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno">
+              <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno" value="<?php echo ($data[0]->apellidoPaterno); ?>">
             </div>
             <div class="form-element-container">
               <label for="apellidoMaterno">Escribe tu apellido materno:</label>
-              <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno">
+              <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno" value="<?php echo ($data[0]->apellidoMaterno); ?>">
             </div>
 
             <div class="form-element-container">
@@ -38,11 +37,11 @@
         </div>
 
         <div class="col-lg-6 image-form-container">
-          <img src="images/form_image.png" alt="note image">
+          <img src="../images/form_image.png" alt="note image">
         </div>
 
-        </div>
       </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
